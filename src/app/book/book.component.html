@@ -1,0 +1,25 @@
+
+
+<div>
+  <form>
+    Enter book Name : <input type="text" [(ngModel)] = "book.bookName" name = "bookName" id="bookName" /> <br/>
+    Enter Author's Name : <input type="text" [(ngModel)] = "book.authorName" name = "authorName" id="authorName" /><br/> <br/>
+    <button (click) = "saveBookDetails()">Save Book</button> <br/> <br/> <br/> <br/>
+  </form>
+</div>
+<div>
+  <span color="red">{{message}}</span>
+</div>
+
+<table border="2">
+    <tr>
+      <th>Book Name</th>
+      <th>Author</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor= "let book of books"> 
+      <td>{{book.bookName}}</td>
+      <td>{{book.authorName}}</td>
+      <td><button>Edit</button></td>
+    </tr>
+</table>
